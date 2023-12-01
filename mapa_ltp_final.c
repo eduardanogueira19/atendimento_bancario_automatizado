@@ -12,6 +12,7 @@ struct cadastrar{
 };
 struct cadastrar cliente[SIZE];
 int qnt = 0;
+//Cadastro dos clientes
 void cadastro(){
 		printf("Insira o seu nome completo: \n");
 		fflush(stdin);
@@ -48,6 +49,7 @@ void cadastro(){
   		system("pause");
 		system("cls");
 }
+//Lista de todos os registros feitos
 void listar_registros(){
 	int i;
 	for(i=0; i<qnt; i++)
@@ -58,6 +60,7 @@ void listar_registros(){
 		printf("=============================================\n");
 	}
 }
+//lista dos registros por setor
 void listar_setor(int tipoSetor){
     int i;
     do{
@@ -80,6 +83,7 @@ int main()
     int op;
 	 do {
 	 	system("cls");
+	 	//menu inicial
         printf("Bem-vindo ao sistema de atendimento\n1 - Solicitar Atendimento\n2 - Listar Atendimentos Registrados\n3 - Listar Atendimento por Setor\n4 - Sair\n");
         scanf("%d", &op);
         switch (op) {
